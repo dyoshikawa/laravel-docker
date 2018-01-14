@@ -5,8 +5,8 @@ services:
       context: ./nginx
     container_name: lara_nginx
     volumes:
-      - ./server.conf:/etc/nginx/conf.d/default.conf
-      - ./var-www-laravel:/var/www/laravel
+      - ./nginx/server.conf:/etc/nginx/conf.d/default.conf
+      - ./laravel/var-www-laravel:/var/www/laravel
     ports:
       - "8000:80"
     links:
@@ -16,7 +16,7 @@ services:
       context: ./laravel
     container_name: lara_laravel
     volumes:
-      - ./var-www-laravel:/var/www/laravel
+      - ./laravel/var-www-laravel:/var/www/laravel
     links:
       - mysql
       - redis
