@@ -5,7 +5,7 @@
 ### ビルド&コンテナ起動
 
 ~~~
-$ git clone https://github.com/daioyoshikawa/docker-laravel.git
+$ git clone https://github.com/dyoshikawa/docker-laravel.git
 $ cd docker-laravel
 $ docker-compose up -d
 ~~~
