@@ -2,7 +2,7 @@
 
 ## Start Project
 
-### ビルド&コンテナ立ち上げ
+### ビルド&コンテナ起動
 
 ~~~
 $ git clone https://github.com/daioyoshikawa/docker-laravel.git
@@ -27,7 +27,7 @@ REDIS_HOST=redis
 
 ## Join Project
 
-### ビルド&コンテナ立ち上げ
+### ビルド&コンテナ起動
 
 - 同上
 
