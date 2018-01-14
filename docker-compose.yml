@@ -9,7 +9,7 @@ services:
       - ./development.conf:/etc/nginx/conf.d/default.conf
       - ./app:/var/www/app
     ports:
-      - "8081:80"
+      - "8000:80"
     links:
       - app
   app:
@@ -23,7 +23,6 @@ services:
       - mysql
       - redis
   mysql:
-    restart: always
     build:
       context: ./
       dockerfile: mysql.docker
@@ -34,7 +33,6 @@ services:
     ports:
       - "3306:3306"
   redis:
-    restart: always
     image: redis:latest
     container_name: lara_redis
     volumes:
