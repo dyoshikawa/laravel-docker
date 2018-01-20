@@ -5,8 +5,7 @@ services:
       context: ./nginx
     container_name: lara_nginx
     volumes:
-      - ./nginx/server.conf:/etc/nginx/conf.d/default.conf
-      - ./laravel/var-www-laravel:/var/www/laravel
+      - ./volumes/laravel.var-www-laravel:/var/www/laravel
     ports:
       - "8000:80"
     links:
@@ -16,7 +15,7 @@ services:
       context: ./laravel
     container_name: lara_laravel
     volumes:
-      - ./laravel/var-www-laravel:/var/www/laravel
+      - ./volumes/laravel.var-www-laravel:/var/www/laravel
     links:
       - mysql
       - redis
@@ -25,15 +24,15 @@ services:
       context: ./mysql
     container_name: lara_mysql
     volumes:
-      - ./mysql/var-lib-mysql:/var/lib/mysql
-    env_file: ./mysql/mysql.env
+      - ./volumes/mysql.var-lib-mysql:/var/lib/mysql
+    env_file: .env
     ports:
       - "3306:3306"
   redis:
     image: redis:latest
     container_name: lara_redis
     volumes:
-      - ./redis/data:/data
+      - ./volumes/redis.data:/data
     ports:
       - "6379:6379"
     command: redis-server --appendonly yes

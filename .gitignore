@@ -1,4 +1,2 @@
 .idea
-laravel/var-www-laravel
-mysql/var-lib-mysql
-redis/data
+volumes

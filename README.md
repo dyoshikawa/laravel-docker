@@ -1,8 +1,6 @@
-# LaravelProjectスターターリポジトリ
+# Laravel on Docker
 
-## Start Project
-
-### ビルド&コンテナ起動
+## Start
 
 ~~~
 $ git clone https://github.com/dyoshikawa/docker-laravel.git
@@ -25,11 +23,7 @@ SESSION_DRIVER=redis
 REDIS_HOST=redis
 ~~~
 
-## Join Project
-
-### ビルド&コンテナ起動
-
-- 同上
+## Join
 
 ### コンテナアクセス
 
