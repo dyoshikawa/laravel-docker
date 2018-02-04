@@ -10,7 +10,7 @@ RUN apk --update add sudo \
 
 RUN docker-php-ext-install pdo_mysql mysqli
 
-RUN apk add -y zip unzip \
+RUN apk add zip unzip \
  && curl -sS https://getcomposer.org/installer | php \
  && mv composer.phar /usr/local/bin/composer
 
