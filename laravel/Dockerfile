@@ -14,6 +14,7 @@ RUN apk add zip unzip \
  && curl -sS https://getcomposer.org/installer | php \
  && mv composer.phar /usr/local/bin/composer
 
+RUN composer global require hirak/prestissimo
 RUN composer create-project --prefer-dist laravel/laravel /var/www/laravel-pre
 WORKDIR /var/www/laravel-pre
 RUN composer require predis/predis \
