@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env bash
 sudo mv /var/www/laravel-pre/* /var/www/laravel/
 sudo mv /var/www/laravel-pre/.?** /var/www/laravel/
 sudo rmdir /var/www/laravel-pre
