@@ -6,7 +6,7 @@ services:
     container_name: laravel_nginx
     volumes:
       - ./nginx/server.conf:/etc/nginx/conf.d/default.conf:cached
-      - ../laravel-app:/var/www/laravel:cached
+      - ../laravel-source:/var/www/laravel:cached
     ports:
       - "8000:80"
     links:
@@ -16,7 +16,7 @@ services:
       context: ./laravel
     container_name: laravel_laravel
     volumes:
-      - ../laravel-app:/var/www/laravel:cached
+      - ../laravel-source:/var/www/laravel:cached
     links:
       - mysql
       - redis
